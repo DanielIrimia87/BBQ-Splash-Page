@@ -1,0 +1,92 @@
+/* Path: css/styles.css */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    color: #404040;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* =================
+   Typography 
+   ================= 
+*/
+
+h1 {
+    font-size: 2.5rem; 
+    font-weight: 400;
+    margin: 2em 0;
+}
+
+h1 + p {
+    color: #F18119;
+    font-weight: 900;
+    font-size: 1.3125rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.3125rem;
+    font-weight: 900;
+}
+
+h2 + p {
+    color: #F18119;
+    font-weight: 900;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.top-text {
+    font-size: 0.625rem;
+    font-weight: 900;
+    color: #F18119;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 1;
+    order: -1;
+    border-top: #F18119 5px solid; 
+    padding-top:.5em; 
+    margin: 0;
+}
+
+.text-bold {
+    font-weight: 900;
+    display: block;
+}
+
+.fine-print {
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+}
+
+/*  
+    ======================
+    header- intro section 
+    ======================
+*/
+
+.header-intro {
+    background: #404040;
+    background: url(../images/dark-ribs.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding: 0em .5em 2em;
+}
+
+/*  
+    ====================
+    main-content section
+    ====================
+*/
+
+.main-content {
+    background: #fff;
+    padding: 2em 1.5em;
+}
+
