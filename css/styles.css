@@ -1,4 +1,7 @@
 /* Path: css/styles.css */
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
@@ -17,7 +20,7 @@ body {
 h1 {
     font-size: 2.5rem; 
     font-weight: 400;
-    margin: 2em 0;
+    margin: 0 0 1rem 0;
 }
 
 h1 + p,
@@ -49,8 +52,7 @@ h2 + p {
     font-size: 0.625rem;
     letter-spacing: 1.5px;
     opacity: 1;
-    order: -1;
-    border-top: #F18119 5px solid; 
+    order: -1; 
     padding-top: 0.5em; 
     margin: 0;
 }
@@ -71,26 +73,85 @@ h2 + p {
     ======================
 */
 
-.header-intro {
+.intro {
     background: #404040;
     background: url(../images/dark-ribs.jpg) no-repeat center;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     color: #fff;
     padding: 0em .5em 2em;
 }
 
 /*  
-    ====================
-    main-content section
-    ====================
+====================
+main-content section
+====================
 */
 
 .main-content {
     padding: 2em 1.5em;
+    margin: 0 auto;
 }
+
+/*  
+=================
+container section
+=================
+*/
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    
+}
+
+.container-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 50vh;
+}
+
+/* 
+============
+form section
+============
+*/
+
+.form {
+    max-width: 337px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    width: 100%;
+}
+
+input {
+    text-align: center;
+    padding: .75em 3em;
+    border: 1px solid #818181;
+    border-radius: 7px;
+}
+
+.btn {
+    background: transparent linear-gradient(270deg, #FF713B 0%, #FFA51D 100%);
+    color: #fff;
+    font-weight: 900;
+    border: none;
+    border-radius: 7px;
+    padding: 0.75em 3em;
+    margin-top: 1em;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
 
 /*  
     =============
@@ -99,8 +160,37 @@ h2 + p {
 */
 
 @media (min-width: 520px) {
+
     body {
-        background: rgba(61, 10, 10, .2);
         font-size: 1.125rem;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2,
+    h1 + p {
+        font-size: 1.75rem;
+    }
+
+    .section{
+        display: flex;
+    }
+
+    .intro, 
+    .main-content {
+        min-height: 100vh;
+        width: 50%;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .container-intro {
+        height: 100%;
     }
 }
