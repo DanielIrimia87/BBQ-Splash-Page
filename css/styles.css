@@ -50,11 +50,14 @@ h2 + p {
 
 .top-text {
     font-size: 0.625rem;
-    letter-spacing: 1.5px;
-    opacity: 1;
-    order: -1; 
-    padding-top: 0.5em; 
-    margin: 0;
+    color: #F18119;
+    font-weight: 900;
+    text-transform: uppercase;
+    order: -1;
+    padding-top: .375em;
+    margin: 0 auto;
+    border-top: 5px solid #F18119;
+    border-image: linear-gradient(270deg, #FF895D 0%, #DF4E13 0%, #FFA51D 100%)1;
 }
 
 .text-bold {
@@ -74,11 +77,18 @@ h2 + p {
 */
 
 .intro {
-    background: #404040;
-    background: url(../images/dark-ribs.jpg) no-repeat center;
+    background: url(../images/ribs.jpg), 
+        linear-gradient(45deg, rgb(28, 25, 25) 0%, #69676d) 
+        no-repeat;
+    background-blend-mode: overlay;
+    background-position: center;
     background-size: cover;
     color: #fff;
     padding: 0em .5em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 50vh;
 }
 
 /*  
@@ -117,41 +127,59 @@ form section
 ============
 */
 
-.form {
-    max-width: 337px;
+.email-collector {
+    width: 80%;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
 }
 
-label {
-    display: block;
-    margin-bottom: 0.5em;
+input,
+.btn {
     width: 100%;
+    text-align: inherit;
+    border-radius: 7px;
 }
 
 input {
-    text-align: center;
-    padding: .75em 3em;
+    font-family: inherit;
     border: 1px solid #818181;
-    border-radius: 7px;
+    padding: .5em;
+    border-radius: 5px;
+    margin-bottom: 0.75em;
 }
 
 .btn {
-    background: transparent linear-gradient(270deg, #FF713B 0%, #FFA51D 100%);
-    color: #fff;
+    display: inline-block;
+    font-size: 0.625rem;
     font-weight: 900;
-    border: none;
-    border-radius: 7px;
-    padding: 0.75em 4em;
-    margin-top: 1em;
-    font-size: 1rem;
-    text-transform: uppercase;
     letter-spacing: 1px;
+    padding: 1em 1.5em;
+    border: 0;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
+.btn-primary {
+    background: transparent linear-gradient(270deg, #FF713B , #FFA51D);
+    color: #ffffff;
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+}
 
+input,
+.btn-primary {
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+input:focus,
+.btn-primary:hover,
+.btn-primary:focus {
+    transform: scale(1.1);
+} 
 
 /*  
     =============
@@ -159,7 +187,7 @@ input {
     =============
 */
 
-@media (min-width: 520px) {
+@media (min-width: 560px) {
 
     body {
         font-size: 1.125rem;
